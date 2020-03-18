@@ -25,7 +25,7 @@ Select RTRIM('Hasan        ')
 Select REVERSE(Adi)from Personeller
 
 --REPLACE Belirtilen ifadeyi belirtilen ifade þeklinde deðiþtirir
-Select REPLACE('Benim Adim Hasan','Hasan','Behlul')
+Select REPLACE('Benim Adim Ahmet','Ahmet','Emre')
 
 --CHARINDEX Belirtilen karakterin veri içinde sýra numarasýný verir
 Select CHARINDEX('r',Adi) from Personeller

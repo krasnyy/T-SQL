@@ -11,6 +11,7 @@ Select KategoriID,TedarikciID,COUNT(*) from Urunler Group By KategoriID,Tedarikc
 select *from Satislar
 
 Select PersonelID,COUNT(*) from Satislar Group By PersonelID
+Select PersonelID,COUNT(*) from Satislar Group By PersonelID
 
 Select PersonelID,SUM(NakliyeUcreti) from Satislar Group By PersonelID
 
