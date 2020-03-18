@@ -140,3 +140,42 @@ Else
 End
 from Urunler
 
+
+
+
+
+--With ties komutu
+
+Select *from [Satis Detaylari]
+
+Select top 6 with ties* from [Satis Detaylari] order by SatisID
+
+
+--With komutu
+
+With PersonelSatis(id,adi,soyadi,satisId)
+as
+(
+Select p.PersonelID,Adi,SoyAdi,SatisID from Personeller p Inner Join Satislar s on p.PersonelID=s.PersonelID
+)
+
+Select *from PersonelSatis ps Inner Join [Satis Detaylari] sd on ps.satisId=sd.SatisID
+
+
+
+
+--SubQuery(Ýçe içe sorgular)
+
+Select s.SatisID, s.SatisTarihi from Personeller p Inner Join Satislar s on p.PersonelID=s.PersonelID Where Adi='Nancy'
+
+
+Select SatisID,SatisTarihi from Satislar Where PersonelID=(Select *from Personeller Where Adi='Nancy')
+
+Select Adi from Personeller Where Adi= (Select Adi from Personeller Where UnvanEki='Dr')
+
+
+
+
+
+
+
